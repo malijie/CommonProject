@@ -1,14 +1,11 @@
 package com.vic.activity;
 
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 
 import com.vic.base.core.ActionCallbackListener;
 import com.vic.base.entity.QuestionItem;
-import com.vic.base.http.RetrofitHttpRequest;
-import com.vic.base.http.SubscriberOnNextListener;
 import com.vic.base.util.Logger;
 
 import java.util.List;
