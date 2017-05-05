@@ -37,6 +37,7 @@ public class MainActivity extends BaseActivity {
 
     private void getDeviceList(){
         String appType = "rand";
+
         mAppAction.getQuestionList(appType,new ActionCallbackListener<List<QuestionItem>>() {
 
             @Override
@@ -50,7 +51,6 @@ public class MainActivity extends BaseActivity {
             }
 
         });
-
 //        RetrofitHttpRequest.getInstance().getC1Subject1OrderQuestions(new SubscriberOnNextListener<List<QuestionItem>>(){
 //            @Override
 //            public void onNext(List<QuestionItem> questionItems) {

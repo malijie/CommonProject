@@ -5,7 +5,8 @@ package com.vic.base.http;
  */
 
 public class URLContainer {
-    private static final String BASE_URL = "http://v.juhe.cn/";
+    private static final String BASE_URL = "http://v.juhe.cn/jztk/query?testType=rand&key=81f85312a3cea93426e336681c734b0f&subject=1&model=c1";
+//    private static final String BASE_URL = "http://v.juhe.cn/query/jztk/query?";
 
     public static String getBaseUrl(){
         return BASE_URL;

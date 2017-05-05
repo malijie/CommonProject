@@ -26,12 +26,13 @@ public class HttpEngine {
 
 
     public <T> T postHandle(Map<String, String> paramsMap, Type typeOfT) throws IOException {
-        String
-                data = joinParams(paramsMap);
+
+
+        String data = joinParams(paramsMap);
         // 打印出请求
-        Logger.mlj("request: " + data);
+Logger.mlj("request11: " + data);
         HttpURLConnection connection = getConnection();
-        connection.setRequestProperty("Content-Length", String.valueOf(data.getBytes().length));
+//        connection.setRequestProperty("Content-Length", String.valueOf(data.getBytes().length));
         connection.connect();
         OutputStream os = connection.getOutputStream();
         os.write(data.getBytes());
