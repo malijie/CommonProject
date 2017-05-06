@@ -26,7 +26,7 @@ public class AppActionImpl implements AppAction {
 
     @Override
     public void getQuestionList(final String appType, final ActionCallbackListener callback) {
-        
+Logger.mlj("new AsyncTask");
         new AsyncTask<Void,Void,ApiResponse<List<QuestionItem>>>(){
             @Override
             protected ApiResponse<List<QuestionItem>> doInBackground(Void... params) {

@@ -44,8 +44,8 @@ public class Util {
     }
 
 
-    public static int getColor(int resColor){
-        return Profile.sContext.getResources().getColor(resColor);
-    }
+//    public static int getColor(int resColor){
+//        return Profile.sContext.getResources().getColor(resColor);
+//    }
 
 }

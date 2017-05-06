@@ -37,6 +37,7 @@ Logger.mlj("request11: " + data);
         OutputStream os = connection.getOutputStream();
         os.write(data.getBytes());
         os.flush();
+Logger.mlj("getResponseCode]===" + connection.getResponseCode());
         if (connection.getResponseCode() == 200) {
             // 获取响应的输入流对象
             InputStream is = connection.getInputStream();
@@ -62,7 +63,7 @@ Logger.mlj("request11: " + data);
             Gson gson = new  Gson();
             Logger.mlj("gson bean===" + gson.fromJson(result, typeOfT));
             return gson.fromJson(result, typeOfT);
-        } else {
+        }else {
             connection.disconnect();
             return null;
         }

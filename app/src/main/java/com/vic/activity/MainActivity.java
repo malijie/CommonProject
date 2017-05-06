@@ -44,18 +44,9 @@ public class MainActivity extends BaseActivity {
 
             @Override
             public void onFailure(String errorCode, String errorMsg) {
-                Logger.mlj("errorCode=" + errorCode + ",errorMsg" + errorMsg);
+                Logger.mlj("errorCode=" + errorCode + ",errorMsg=" + errorMsg);
             }
 
         });
-//        RetrofitHttpRequest.getInstance().getC1Subject1OrderQuestions(new SubscriberOnNextListener<List<QuestionItem>>(){
-//            @Override
-//            public void onNext(List<QuestionItem> questionItems) {
-//                super.onNext(questionItems);
-//
-//Logger.mlj("questionItems===" + questionItems);
-//
-//            }
-//        });
     }
 }

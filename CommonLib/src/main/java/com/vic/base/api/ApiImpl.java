@@ -4,6 +4,7 @@ import com.google.gson.reflect.TypeToken;
 import com.vic.base.entity.QuestionItem;
 import com.vic.base.http.HttpBase;
 import com.vic.base.http.HttpEngine;
+import com.vic.base.util.Logger;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
