@@ -16,7 +16,7 @@ public class ApiResponse<T> {
     }
 
     public boolean isSuccess(){
-        return  error_code.equals("200");
+        return  error_code.equals("0");
     }
 
     public String getError_code() {

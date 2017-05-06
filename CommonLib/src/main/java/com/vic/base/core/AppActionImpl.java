@@ -10,6 +10,7 @@ import com.vic.base.entity.QuestionItem;
 import com.vic.base.util.Logger;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by malijie on 2017/4/19.
@@ -25,12 +26,11 @@ public class AppActionImpl implements AppAction {
 
 
     @Override
-    public void getQuestionList(final String appType, final ActionCallbackListener callback) {
-Logger.mlj("new AsyncTask");
+    public void getQuestionList(final Map paramsMap, final ActionCallbackListener callback) {
         new AsyncTask<Void,Void,ApiResponse<List<QuestionItem>>>(){
             @Override
             protected ApiResponse<List<QuestionItem>> doInBackground(Void... params) {
-                return api.getQuestionList(appType);
+                return api.getQuestionList(paramsMap);
             }
 
             @Override

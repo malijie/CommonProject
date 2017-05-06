@@ -26,18 +26,14 @@ public class HttpEngine {
 
 
     public <T> T postHandle(Map<String, String> paramsMap, Type typeOfT) throws IOException {
-
-
         String data = joinParams(paramsMap);
         // 打印出请求
-Logger.mlj("request11: " + data);
         HttpURLConnection connection = getConnection();
         connection.setRequestProperty("Content-Length", String.valueOf(data.getBytes().length));
         connection.connect();
         OutputStream os = connection.getOutputStream();
         os.write(data.getBytes());
         os.flush();
-Logger.mlj("getResponseCode]===" + connection.getResponseCode());
         if (connection.getResponseCode() == 200) {
             // 获取响应的输入流对象
             InputStream is = connection.getInputStream();
@@ -61,7 +57,6 @@ Logger.mlj("getResponseCode]===" + connection.getResponseCode());
             Logger.mlj("response: " + result);
 
             Gson gson = new  Gson();
-            Logger.mlj("gson bean===" + gson.fromJson(result, typeOfT));
             return gson.fromJson(result, typeOfT);
         }else {
             connection.disconnect();

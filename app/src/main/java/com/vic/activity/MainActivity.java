@@ -6,9 +6,12 @@ import android.widget.Button;
 
 import com.vic.base.core.ActionCallbackListener;
 import com.vic.base.entity.QuestionItem;
+import com.vic.base.http.HttpBase;
 import com.vic.base.util.Logger;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import cameraclient.activity.R;
 
@@ -33,9 +36,13 @@ public class MainActivity extends BaseActivity {
     }
 
     private void getDeviceList(){
-        String appType = "rand";
+        Map<String,String> paramsMap = new HashMap<>();
+        paramsMap.put("subject","1");
+        paramsMap.put("model","c1");
+        paramsMap.put("key", HttpBase.APP_KEY);
+        paramsMap.put("testType","rand");
 
-        mAppAction.getQuestionList(appType,new ActionCallbackListener<List<QuestionItem>>() {
+        mAppAction.getQuestionList(paramsMap,new ActionCallbackListener<List<QuestionItem>>() {
 
             @Override
             public void onSuccess(List<QuestionItem> data) {

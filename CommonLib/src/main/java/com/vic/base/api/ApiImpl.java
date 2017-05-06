@@ -21,13 +21,8 @@ public class ApiImpl implements Api {
     private final static String TIME_OUT_EVENT_MSG = "连接服务器失败";
 
     @Override
-    public ApiResponse<List<QuestionItem>> getQuestionList(String testType) {
+    public ApiResponse<List<QuestionItem>> getQuestionList(Map<String,String> paramsMap) {
 
-        Map<String,String> paramsMap = new HashMap<String,String>();
-        paramsMap.put("subject","1");
-        paramsMap.put("model","c1");
-        paramsMap.put("key", HttpBase.APP_KEY);
-        paramsMap.put("testType",testType);
         Type type = new TypeToken<ApiResponse<List<QuestionItem>>>(){}.getType();
         try {
             return new HttpEngine().postHandle(paramsMap,type);
