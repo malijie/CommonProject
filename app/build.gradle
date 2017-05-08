@@ -15,8 +15,24 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        debug{
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
+
+    signingConfigs {
+        debug {
+            storeFile file('key_store.jks')
+            storePassword "malijie920"
+            keyAlias "app"
+            keyPassword "malijie920"
+        }
+    }
+
 }
 
 dependencies {
