@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import cameraclient.activity.R;
+import com.vic.common.R;
 
 
 public class MainActivity extends BaseActivity {
