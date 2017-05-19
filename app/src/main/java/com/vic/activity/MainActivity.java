@@ -51,6 +51,8 @@ public class MainActivity extends BaseActivity {
         @Override
         public void onStart(SHARE_MEDIA platform) {
             //分享开始的回调
+            Logger.mlj("start to share");
+
         }
         @Override
         public void onResult(SHARE_MEDIA platform) {
